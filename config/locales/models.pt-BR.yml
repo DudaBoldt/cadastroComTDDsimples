@@ -1,0 +1,23 @@
+pt-BR:
+  activerecord:
+    models:
+      customer:
+        one: Brother
+        other: Brothers
+    attributes:
+      customer:
+        id: Código
+        name: Nome
+        email: Email
+        phone: Telefone
+        smoker: Fumante?
+        avatar: Foto do Perfil
+        created_at: Criado em
+        updated_at: Atualizado em
+  name: Nome
+  email: Email
+  phone: Telefone
+  smoker: Fumante?
+  avatar: Foto do Perfil
+  created_at: Criado em
+  updated_at: Atualizado em

@@ -1,0 +1,31 @@
+<% if @customer.errors.any? %>
+  <ul>
+    <% @customer.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<h1>Novo brother</h1>
+
+<%= form_for @customer do |f| %>
+  
+  <%= f.label :name, I18n.t('name') %>
+  <%= f.text_field :name %> <br />
+
+  <%= f.label :email, I18n.t('email') %>
+  <%= f.text_field :email %><br />
+
+  <%= f.label :phone, I18n.t('phone') %>
+  <%= f.text_field :phone %><br />
+
+  <%= f.label :avatar, I18n.t('avatar') %>
+  <%= f.file_field :avatar %><br />
+
+  <%= f.label :smoker, I18n.t('smoker') %> <br />
+  <% { 'S': 'Sim', 'N': 'Não' }.each do |key, value| %>
+    <%= f.radio_button :smoker, key %> <%= value %> <br />
+  <% end %>
+  
+  <div><%= f.submit "Criar brother",:class => "btn btn-primary" %></div>
+<% end %>
